@@ -1,68 +1,64 @@
-let score = 33
-let points = "8"
-let temp = "kl990"
-let temprature = null
-let temep2 = undefined
+// =============================
+// JavaScript Type Conversion & Operations
+// =============================
 
-//when we work on backend we don't know type of the varible
-console.log(typeof score);     //number
-console.log(typeof points)     //string
-console.log(typeof temp)       //string
-console.log(temprature)        //0
-console.log(temep2)            //NaN
+// 💡 Backend devs often don't know the type of incoming variables, so conversion is important
 
+let score = 33;
+let points = "8";
+let temp = "kl990";
+let temprature = null;
+let temep2 = undefined;
 
-let valueInNumber = Number( points);
-let tempInNumber = Number(temp);
+console.log(typeof score);     // number
+console.log(typeof points);    // string
+console.log(typeof temp);      // string
 
+// 🧪 Type conversions
+console.log(Number(temprature));  // 0 (null → 0 when converted to number)
+console.log(Number(temep2));      // NaN (undefined → NaN)
 
+let valueInNumber = Number(points);    // "8" → 8
+let tempInNumber = Number(temp);       // "kl990" → NaN
 
-console.log(typeof score);         //number
-console.log(typeof valueInNumber)  //number
-console.log(typeof tempInNumber)   //number // but this is not a valid number
-
-console.log(tempInNumber)   //NaN
-
-
-
-
-let isLoggedIn =1
-let bollIsLoggedIn = Boolean(isLoggedIn)
-let isthere = ""
-let boolisthere = Boolean(isthere)
-console.log(boolisthere)      //false
-let isName = "saloni"
-let boolisName = Boolean(isName) 
-console.log(boolisName)      //true
-
-console.log(bollIsLoggedIn);  //true
+console.log(typeof valueInNumber);     // number
+console.log(typeof tempInNumber);      // number (but invalid: NaN)
+console.log(tempInNumber);             // NaN
 
 
+// ✅ Boolean Conversion
+let isLoggedIn = 1;
+let bollIsLoggedIn = Boolean(isLoggedIn); // 1 → true
 
+let isthere = "";
+let boolisthere = Boolean(isthere);       // "" → false
 
+let isName = "saloni";
+let boolisName = Boolean(isName);         // non-empty string → true
 
- //**************** OPERATIONS ******************************
+console.log(bollIsLoggedIn);  // true
+console.log(boolisthere);     // false
+console.log(boolisName);      // true
 
- let value =3
- let negVal = -value
+// 🧠 Falsy values in JS: false, 0, -0, "", null, undefined, NaN
 
- console.log(negVal);     //-3
+// =============================
+// JS OPERATIONS
+// =============================
 
- let str1 = "hello"
- let str2 = " world"
+let value = 3;
+let negVal = -value;
 
- let str = str1 +str2
- console.log(str)
+console.log(negVal);   // -3
 
+let str1 = "hello";
+let str2 = " world";
 
+let str = str1 + str2;
+console.log(str);      // "hello world"
 
-
-
-
- //conversion -2
-
- console.log("1" +2);   // 12
- console.log(1+ "2");   //12   
- console.log("1" +2 +2);  //122
- console.log(1+ 2 +"2");   //32  <-Note, here js is acting differently
-
+// 🚨 Type coercion in operations
+console.log("1" + 2);      // "12"  -> string + number → string
+console.log(1 + "2");      // "12"
+console.log("1" + 2 + 2);  // "122" -> left-to-right: "1"+2="12", then "12"+2="122"
+console.log(1 + 2 + "2");  // "32"  -> 1+2=3, then 3+"2" = "32"
