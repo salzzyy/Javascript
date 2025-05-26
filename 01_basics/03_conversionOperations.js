@@ -36,3 +36,33 @@ let boolisName = Boolean(isName)
 console.log(boolisName)      //true
 
 console.log(bollIsLoggedIn);  //true
+
+
+
+
+
+ //**************** OPERATIONS ******************************
+
+ let value =3
+ let negVal = -value
+
+ console.log(negVal);     //-3
+
+ let str1 = "hello"
+ let str2 = " world"
+
+ let str = str1 +str2
+ console.log(str)
+
+
+
+
+
+
+ //conversion -2
+
+ console.log("1" +2);   // 12
+ console.log(1+ "2");   //12   
+ console.log("1" +2 +2);  //122
+ console.log(1+ 2 +"2");   //32  <-Note, here js is acting differently
+
